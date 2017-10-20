@@ -1,0 +1,35 @@
+{
+  "name": "frontend-exercise",
+  "version": "0.1.0",
+  "description": "A homework exercise for frontend candidates",
+  "scripts": {
+    "start": "budo src/index.js:bundle.js --live --debug --pushstate"
+  },
+  "author": "Mapbox",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "nanohref": "^1.0.0",
+    "nanorouter": "^2.1.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "budo": "^10.0.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  }
+}
