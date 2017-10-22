@@ -2,6 +2,12 @@
 
 const React = require('react');
 const PropTypes = require('prop-types');
+const caterpillars = [
+  { name: 'dryandra', rating: 1 },
+  { name: 'flambeau', rating: 2 },
+  { name: 'saddleback', rating: 3 },
+  { name: 'swallowtail', rating: 2 }
+];
 
 class Navigation extends React.Component {
   render() {
@@ -31,7 +37,7 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  active: PropTypes.oneOf(['saddleback', 'flambeau'])
+  active: PropTypes.oneOf(caterpillars.map(caterpillar => caterpillar.name))
 };
 
 module.exports = Navigation;
