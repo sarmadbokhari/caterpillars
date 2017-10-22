@@ -17,6 +17,14 @@ const routes = [
   {
     path: '/flambeau/',
     page: require('./caterpillars/flambeau')
+  },
+  {
+    path: '/dryandra/',
+    page: require('./caterpillars/dryandra')
+  },
+  {
+    path: '/swallowtail/',
+    page: require('./caterpillars/swallowtail')
   }
 ];
 
