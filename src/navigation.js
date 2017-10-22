@@ -61,25 +61,53 @@ class Navigation extends React.Component {
   }
 
   render() {
+    // Inline Styling
+    const Styles = {
+      sort: {
+        marginTop: '10px'
+      },
+      caterpillar: {
+        textTransform: 'capitalize'
+      }
+    }
+
+    // Navigation
+    const navItems = this.state.caterpillars.map((caterpillar, i) => {
+      return (
+        <li key={i}>
+          <a 
+            href={`/${caterpillar.name}/`}
+            className={`link ${this.props.active === caterpillar.name ? 'txt-bold' : ''}`}
+            style={Styles.caterpillar}
+            >
+            {caterpillar.name}
+          </a>
+        </li>
+      )
+    });
+
+    const sortOptions = this.state.sortOptions.map((option, i) => {
+      return ( 
+        <li key={i}>
+          <a className={`link ${this.state.sortStrategy === option ? 'txt-bold' : ''}`} onClick={(e) => this.sortBy(e)}>
+            {option}
+          </a>
+        </li>
+      )
+    });
+
     return (
       <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm">
         <ul>
-          <li>
-            <a
-              href="/flambeau/"
-              className={`link ${this.props.active === 'flambeau' ? 'txt-bold' : ''}`}
-            >
-              Flambeau
-            </a>
-          </li>
-          <li>
-            <a
-              href="/saddleback/"
-              className={`link ${this.props.active === 'saddleback' ? 'txt-bold' : ''}`}
-            >
-              Saddleback
-            </a>
-          </li>
+          {this.state.caterpillars.length ? navItems : <em>no results</em>}
+        </ul>
+        <ul style={Styles.sort}>
+          Sort by
+          {sortOptions}
+        </ul>
+        <ul style={Styles.sort}>
+          Filter by
+          <input type="search" placeholder="search" onChange={this.filterBy} />
         </ul>
       </div>
     );
