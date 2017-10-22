@@ -10,6 +10,14 @@ const caterpillars = [
 ];
 
 class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      sortOptions: ['alphabeta', 'rating'],
+      sortStrategy: 'alphabeta',
+      caterpillars: caterpillars
+    };
   render() {
     return (
       <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm">
