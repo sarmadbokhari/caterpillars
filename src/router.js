@@ -8,23 +8,23 @@ const Home = require('./home');
 const routes = [
   {
     path: '/',
-    page: require('./home')
+    page: Home
   },
   {
     path: '/saddleback/',
-    page: require('./caterpillars/saddleback')
+    page: Home
   },
   {
     path: '/flambeau/',
-    page: require('./caterpillars/flambeau')
+    page: Home
   },
   {
     path: '/dryandra/',
-    page: require('./caterpillars/dryandra')
+    page: Home
   },
   {
     path: '/swallowtail/',
-    page: require('./caterpillars/swallowtail')
+    page: Home
   }
 ];
 
