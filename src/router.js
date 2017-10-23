@@ -11,19 +11,19 @@ const routes = [
     page: Home
   },
   {
-    path: '/saddleback/',
+    path: '/saddleback',
     page: Home
   },
   {
-    path: '/flambeau/',
+    path: '/flambeau',
     page: Home
   },
   {
-    path: '/dryandra/',
+    path: '/dryandra',
     page: Home
   },
   {
-    path: '/swallowtail/',
+    path: '/swallowtail',
     page: Home
   }
 ];

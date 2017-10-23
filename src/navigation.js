@@ -28,6 +28,7 @@ class Navigation extends React.Component {
       return (
         <li key={i}>
           <a
+            href={caterpillar.name}
             onClick={this.props.view}
             className={`link ${this.props.active.toLowerCase() === caterpillar.name ? 'txt-bold' : ''}`}
             style={Styles.caterpillar}
