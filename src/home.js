@@ -1,7 +1,6 @@
 'use strict';
 
 const React = require('react');
-const nanorouter = require('nanorouter');
 const Navigation = require('./navigation');
 const Dryandra = require('./caterpillars/dryandra');
 const Flambeau = require('./caterpillars/flambeau');
